@@ -12,6 +12,7 @@ module.exports = {
     filename: "[name][contenthash].js",
     clean: true, // Clean the output directory before each build
   },
+  devtool: "source-map",
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
