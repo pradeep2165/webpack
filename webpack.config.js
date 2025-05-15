@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    filename: "[name][contenthash].js",
   },
   module: {
     rules: [
@@ -21,7 +21,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Webpack App",
-      //   template: path.resolve(__dirname, "./src/index.html"),
+      template: path.resolve(__dirname, "./src/template.html"),
       filename: "index.html",
     }),
   ],
