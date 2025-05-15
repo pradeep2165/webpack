@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { clear } = require("console");
 
 module.exports = {
   mode: "development",
@@ -9,6 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name][contenthash].js",
+    clean: true, // Clean the output directory before each build
   },
   devServer: {
     static: {
