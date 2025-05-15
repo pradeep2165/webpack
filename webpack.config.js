@@ -29,6 +29,24 @@ module.exports = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        type: "asset/resource",
+      },
+      //   {
+      //     test: /\.(woff|woff2|eot|ttf|otf)$/,
+      //     type: "asset/resource",
+      //   }
     ],
   },
   plugins: [
