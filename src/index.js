@@ -8,4 +8,6 @@ document.getElementById("joke").innerHTML = generateJoke();
 document.getElementById("jokeBtn").addEventListener("click", () => {
   document.getElementById("joke").innerHTML = generateJoke();
 });
+document.getElementById("laughingImage").src = laughing;
+document.getElementById("laughingImage").alt = "Laughing emoji";
 console.log(uuidv4());

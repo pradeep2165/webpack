@@ -11,6 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name][contenthash].js",
     clean: true, // Clean the output directory before each build
+    assetModuleFilename: "[name][ext]", // Output path for assets
   },
   devtool: "source-map",
   devServer: {
