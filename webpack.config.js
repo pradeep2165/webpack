@@ -10,6 +10,16 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name][contenthash].js",
   },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    compress: true,
+    open: true,
+    port: 3000,
+    hot: true,
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {
