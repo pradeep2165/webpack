@@ -50,6 +50,9 @@ module.exports = {
       //   }
     ],
   },
+  optimization: {
+    usedExports: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: "Webpack App",
